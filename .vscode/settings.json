@@ -68,6 +68,14 @@
         "stc8fxx.h": "c",
         "stc8h.h": "c",
         "stdint.h": "c",
-        "chrono": "c"
-    }
+        "chrono": "c",
+        "stc8g_h_adc.h": "c",
+        "config.h": "c",
+        "stdlib.h": "c",
+        "stc8hhhh.h": "c",
+        "lint.h": "c",
+        "adc.h": "c",
+        "fw_hal.h": "c"
+    },
+    "C_Cpp.default.compilerPath": "/Users/abenx/.platformio/packages/toolchain-sdcc/bin/sdcc"
 }

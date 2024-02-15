@@ -1,21 +1,21 @@
-#include "stc8h.h"
-#include "gpio.h"
-#include "delay.h"
+#include <fw_hal.h>
 
-#define PIN_LED P10
-
+void GPIO_Init(void)
+{
+    GPIO_P1_SetMode(GPIO_Pin_0, GPIO_Mode_Output_PP);
+}
 
 void main(void)
 {
-    // Setup
-    P_SW2 |= 0x80; // enable access to extended registers (MUST!)
-
-    PIN_output(PIN_LED);
-
+    GPIO_Init();
 
     while (1)
     {
-        PIN_toggle(PIN_LED);
-        delay_s_ms(300); // 延时一小段时间，控制音符之间的间隔
+
+        P10 = SET;
+        SYS_Delay(500);
+
+        P10 = RESET;
+        SYS_Delay(500);
     }
 }
